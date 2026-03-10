@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Source+Sans+3:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 97%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 0 72% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 47 95% 62%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 30 20% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 145 45% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 0 72% 70%;
+
+    --radius: 0.75rem;
+
+    /* Brand colors */
+    --coral: 0 72% 70%;
+    --sunshine: 47 95% 62%;
+    --sky: 215 85% 62%;
+    --mint: 145 45% 61%;
+
+    /* Categorical tints */
+    --tint-educational: 215 85% 62%;
+    --tint-outdoor: 145 45% 61%;
+    --tint-new: 0 72% 70%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 0% 15%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 0 72% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, nav, button {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

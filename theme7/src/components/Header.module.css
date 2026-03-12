@@ -1,0 +1,255 @@
+.header {
+    background-color: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.bottomRow {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 12px 0;
+}
+
+.logo a {
+    font-size: 2.22rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 180px;
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    padding: 10px;
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdownContent a {
+    color: var(--text-dark);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.dropdownContent a:hover {
+    background-color: var(--surface);
+    color: var(--primary);
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.searchBar input {
+    width: 100%;
+    padding: 12px 20px;
+    padding-right: 45px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--surface);
+    outline: none;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.searchBar input:focus {
+    border-color: var(--primary);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px rgba(255, 126, 185, 0.1);
+}
+
+.searchIcon {
+    position: absolute;
+    right: 18px;
+    color: var(--text-light);
+}
+
+.iconBtn:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.iconBtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    line-height: 1;
+}
+
+.menuToggle {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 5px 0;
+    }
+
+    .topRow {
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    .menuToggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-dark);
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+
+    .searchBar {
+        display: none;
+    }
+
+    .logo a {
+        font-size: 1.8rem;
+    }
+
+    .actions {
+        gap: 15px;
+    }
+
+    .bottomRow {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--white);
+        transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 999;
+        box-shadow: 20px 0 50px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+    .menuOpen {
+        left: 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 0;
+        width: 100%;
+    }
+
+    .navLink {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        font-size: 1.1rem;
+        justify-content: flex-start;
+    }
+
+    .dropdown {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdownContent {
+        position: static;
+        display: block;
+        box-shadow: none;
+        padding: 0 0 0 20px;
+        border: none;
+        width: 100%;
+        background: transparent;
+    }
+
+    .dropdownContent a {
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,125 @@
+.footer {
+    background: var(--text-dark);
+    color: white;
+    padding: 80px 0 0 0;
+    margin-top: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.brand {
+    flex: 1;
+    min-width: 250px;
+}
+
+.logoText {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.logoAccent {
+    color: var(--secondary);
+}
+
+.tagline {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.socials span {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.socials span:hover {
+    background: var(--secondary);
+    color: var(--text-dark);
+}
+
+.linksSection {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    min-width: 300px;
+}
+
+.column h3 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: var(--tertiary);
+}
+
+.column ul li {
+    margin-bottom: 12px;
+    color: #bbb;
+    transition: var(--transition);
+}
+
+.column ul li:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+
+.bottomBar {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .footer {
+        padding-top: 60px;
+        margin-top: 60px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .linksSection {
+        flex-direction: row;
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    .linksSection {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .logoText {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}

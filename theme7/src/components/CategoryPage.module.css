@@ -1,0 +1,176 @@
+.categoryPage {
+    padding-bottom: 80px;
+}
+
+.banner {
+    background: linear-gradient(135deg, var(--primary-light, #fff0f6), var(--tertiary-light, #fff9db));
+    padding: 100px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pageTitle {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.pageDesc {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.activeCrumb {
+    color: var(--text-dark);
+}
+
+.mainContent {
+    margin-bottom: 80px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--surface);
+    border-radius: 50px;
+}
+
+.resultCount {
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.resultCount span {
+    color: var(--text-dark);
+}
+
+.sorting {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sorting label {
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.sorting select {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+.layout {
+    display: flex;
+    gap: 40px;
+}
+
+.gridWrapper {
+    flex-grow: 1;
+}
+
+.noResults {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.noResults h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 60px;
+}
+
+.pageBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.pageBtn:hover:not(:disabled) {
+    background: var(--tertiary);
+    border-color: var(--tertiary);
+}
+
+.activePage {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.pageBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.recommended {
+    margin-top: 100px;
+    border-top: 2px solid var(--surface);
+    padding-top: 80px;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .pageTitle {
+        font-size: 2.5rem;
+    }
+
+    .pageDesc {
+        font-size: 1.1rem;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 20px;
+    }
+}

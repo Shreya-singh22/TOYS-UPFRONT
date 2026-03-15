@@ -1,0 +1,109 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mainImageWrapper {
+    position: relative;
+    height: 600px;
+    background: var(--surface);
+    border-radius: 40px;
+    padding: 40px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    cursor: zoom-in;
+    box-shadow: var(--shadow);
+}
+
+.mainImage {
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    color: white;
+    opacity: 0;
+    transition: var(--transition);
+    border: 1px solid var(--glass-border);
+}
+
+.mainImageWrapper:hover .navBtn {
+    opacity: 1;
+}
+
+.navBtn:hover {
+    background: var(--primary-grad);
+    border-color: transparent;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 15px 5px;
+    scrollbar-width: none;
+}
+
+.thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+.thumb {
+    width: 100px;
+    height: 100px;
+    background: var(--surface);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.activeThumb {
+    border-color: var(--primary);
+    background: var(--card-bg);
+    box-shadow: 0 0 20px rgba(255, 79, 216, 0.2);
+}
+
+.thumb:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .mainImageWrapper {
+        height: 450px;
+        padding: 20px;
+    }
+
+    .thumb {
+        width: 80px;
+        height: 80px;
+    }
+}

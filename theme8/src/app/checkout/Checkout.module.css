@@ -1,0 +1,185 @@
+.checkoutPage {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    align-items: start;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--surface);
+    padding-bottom: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formGroup label {
+    font-weight: 700;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid var(--surface);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.placeBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 126, 185, 0.4);
+    transition: var(--transition);
+}
+
+.placeBtn:hover {
+    transform: scale(1.02);
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.summaryItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.itemThumb {
+    background: var(--surface);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.itemDetails {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemName {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.totals {
+    border-top: 2px solid var(--surface);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.grandTotal {
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.trustBanner {
+    margin-top: 25px;
+    background: #f1fcf9;
+    color: #00b894;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.successPage {
+    text-align: center;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.homeBtn {
+    background: var(--primary);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}

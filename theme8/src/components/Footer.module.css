@@ -1,0 +1,137 @@
+.footer {
+    background: #020617;
+    color: white;
+    padding: 100px 0 0 0;
+    margin-top: 120px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding-bottom: 80px;
+}
+
+.brand {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.logoText {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.logoAccent {
+    background: var(--primary-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    color: var(--text-light);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    max-width: 400px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials span {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-light);
+}
+
+.socials span:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.linksSection {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.column h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.column ul li {
+    margin-bottom: 18px;
+    color: var(--text-light);
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.column ul li:hover {
+    color: var(--primary-glow);
+    transform: translateX(5px);
+}
+
+.bottomBar {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 80px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .linksSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .linksSection {
+        grid-template-columns: 1fr;
+    }
+
+    .logoText {
+        font-size: 2rem;
+    }
+}

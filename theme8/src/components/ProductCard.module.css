@@ -1,0 +1,255 @@
+.card {
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    background: var(--card-bg);
+    box-shadow: var(--shadow-hover);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: contain !important;
+    padding: 30px;
+    transition: var(--transition);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.quickActions {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.card:hover .quickActions {
+    bottom: 20px;
+}
+
+.actionBtn {
+    width: 40px;
+    height: 40px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: var(--transition);
+}
+
+.actionBtn:hover {
+    background: var(--primary);
+    border-color: transparent;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+}
+
+.activeWish {
+    color: var(--primary);
+}
+
+.activeWish svg {
+    animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.badgeNew {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(90deg, #7c3aed, #a78bfa);
+    color: white;
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.discountBadge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(90deg, #ff4fd8, #ffb8e4);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(255, 79, 216, 0.3);
+}
+
+.content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.brand {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-glow);
+    font-weight: 700;
+}
+
+.name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--text-light);
+    line-height: 1.2;
+    transition: var(--transition);
+}
+
+.card:hover .name {
+    color: white;
+}
+
+.category {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    opacity: 0.6;
+    margin-bottom: 30px;
+    /* Increased space before footer */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.priceGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+}
+
+.oldPrice {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+}
+
+.score {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--tertiary);
+}
+
+.addBtn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.card:hover .addBtn {
+    background: var(--primary-grad);
+    border-color: transparent;
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.addBtn:hover {
+    background: var(--secondary);
+    box-shadow: 0 8px 25px rgba(255, 230, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .imageWrapper {
+        height: 200px;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+}
